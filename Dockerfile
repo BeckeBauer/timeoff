@@ -17,10 +17,10 @@
 FROM alpine:latest as dependencies
 
 RUN apk add --no-cache \
-    nodejs npm build-base python3 sqlite make gcc musl-dev libc-dev 
+    nodejs npm build-base python3 mysql make gcc musl-dev libc-dev 
 
 COPY package.json  .
-RUN npm install 
+RUN npm install
 
 FROM alpine:latest
 
